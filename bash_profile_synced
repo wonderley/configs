@@ -1,7 +1,7 @@
-echo "Running ~/.bash_profile"
-if [ -e ~/.bash_profile_local ]
-  source ~/.bash_profile_local
-fi
+script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+script_name=$( basename "${BASH_SOURCE[0]}" )
+echo Running $script_dir/$script_name
+source $script_dir/bash_profile_local
 # Add scripts to path
 export PATH=$PATH:/Users/i836957/scripts
 
