@@ -1,0 +1,19 @@
+#! /bin/bash
+set -e
+script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+script_name=$( basename "${BASH_SOURCE[0]}" )
+echo Running $script_dir/$script_name
+dataDir="$script_dir/data"
+todoPath="$dataDir/todo.txt"
+if [ -z "$1" ]; then
+    if [ -s $todoPath ]; then
+        echo "TODO:"
+        cat $todoPath
+    else
+        echo "Nothing in $todoPath"
+    fi
+    exit 0
+fi
+mkdir -p $dataDir
+echo $@ >> $todoPath
+

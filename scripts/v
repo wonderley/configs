@@ -1,0 +1,7 @@
+#! /bin/bash
+# Assumes that vim is on the right
+for file in $@; do
+    abs_path=`realpath "$file"`
+    tmux send-keys -t "right" :tabe\ $abs_path Enter
+done
+tmux select-pane -R
