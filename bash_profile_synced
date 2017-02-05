@@ -1,6 +1,5 @@
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 script_name=$( basename "${BASH_SOURCE[0]}" )
-echo Running $script_dir/$script_name
 # Add scripts to path
 export PATH=$PATH:$script_dir/scripts
 # Make tmux use bash
