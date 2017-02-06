@@ -1,0 +1,12 @@
+#! /bin/bash
+tmux start-server
+session=tmuxsession
+tmux new -d -s $session
+tmux split-window -h -t $session
+tmux send -t $session:0.right "vim" C-m
+tmux send -t $session:0.right ":Explore" C-m
+tmux select-pane -L -t $session 
+tmux split-window -v -t $session
+tmux select-pane -U -t $session
+tmux a -t $session
+

@@ -7,6 +7,8 @@ set expandtab
 set backspace=2
 " Disable swap files and recovery
 set noswapfile
+" Don't let :E get overridden
+command! E Explore
 
 " See .bash_profile
 " http://stackoverflow.com/questions/5999837/how-to-open-another-file-in-background-vim-from-bash-command-line

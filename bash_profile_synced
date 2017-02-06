@@ -8,6 +8,8 @@ export SHELL=/bin/bash
 export PS1="\W > "
 # Easy access to this directory
 export CNF=$script_dir
+# Use Vim for Git
+export EDITOR=vim
 
 source $script_dir/bash_profile_local
 
