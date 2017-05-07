@@ -1,0 +1,5 @@
+#! /bin/bash
+script_path="$CNF/scripts/$1"
+vim $script_path
+chmod +x $script_path
+
