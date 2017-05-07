@@ -29,6 +29,6 @@ if [ ! -e $HOME/.vim/bundle/Vundle.vim ]; then
   # Install plugins which are specified in vimrc_synced.
   vim -c 'PluginInstall' -c 'qa!'
 fi
-echo Sourcing $script_dir/bash_profile_synced.
-source $script_dir/bash_profile_synced
+echo Configurations installed. Now run this command:
+echo source $script_dir/bash_profile_synced
 
