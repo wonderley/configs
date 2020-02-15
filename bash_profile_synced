@@ -7,9 +7,10 @@ export SHELL=/bin/bash
 # PS1
 export PS1="\W > "
 # Easy access to this directory
-export CNF=$script_dir
+export SCRIPTS=$script_dir
 # Use Vim for Git
 export EDITOR=vim
 
-source $script_dir/bash_profile_local
+local_profile_path=$script_dir/bash_profile_local
+[ -e "$local_profile_path" ] && source "$local_profile_path"
 
