@@ -1,0 +1,2 @@
+#!/bin/sh
+gdate +%s%N | cut -b1-13
