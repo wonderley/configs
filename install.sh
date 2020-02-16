@@ -26,11 +26,11 @@ fi
 #   echo Creating vimrc_local.
 #   touch $script_dir/vimrc_local
 # fi
-#if [ ! -e $HOME/.vim/bundle/Vundle.vim ]; then
-#  git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
-#  # Install plugins which are specified in vimrc_synced.
-#  vim -c 'PluginInstall' -c 'qa!'
-#fi
+if [ ! -e $HOME/.vim/bundle/Vundle.vim ]; then
+ git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+ # Install plugins which are specified in vimrc_synced.
+ vim -c 'PluginInstall' -c 'qa!'
+fi
 echo "Configurations installed. Now run this command (or just start a new terminal session):"
 echo source $script_dir/bash_profile_synced
 
