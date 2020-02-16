@@ -14,3 +14,5 @@ export EDITOR=vim
 local_profile_path=$script_dir/bash_profile_local
 [ -e "$local_profile_path" ] && source "$local_profile_path"
 
+alias ls='ls -G'
+alias grep='grep --color'
