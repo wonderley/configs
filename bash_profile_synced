@@ -16,3 +16,7 @@ local_profile_path=$script_dir/bash_profile_local
 
 alias ls='ls -G'
 alias grep='grep --color'
+
+# https://stackoverflow.com/questions/12373586/how-to-reverse-i-search-back-and-forth
+# Use C-s to i-search
+stty -ixon
