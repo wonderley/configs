@@ -1,0 +1,19 @@
+#!/bin/bash
+function is_on_path() {
+  echo "$PATH" | grep -E "^$1|:$1" > /dev/null
+}
+
+function add_to_path() {
+  is_on_path $1 || export PATH="$PATH":$1
+}
+export -f add_to_path
+
+#function test() {
+#  echo PATH: $PATH
+#  echo adding test_dir to path
+#  add_to_path test_dir
+#  echo PATH: $PATH
+#  echo adding test_dir to path again
+#  add_to_path test_dir
+#  echo PATH: $PATH
+#}
