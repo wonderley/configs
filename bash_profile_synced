@@ -2,6 +2,11 @@ cnf_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 script_name=$( basename "${BASH_SOURCE[0]}" )
 scripts_dir=$cnf_dir/scripts
 
+if [ -z "$BASH_VERSION" ]; then
+  # Don't run with zsh
+  exit 0
+fi
+
 # Easy access to this directory
 export CNF=$cnf_dir
 export SCRIPTS=$scripts_dir
