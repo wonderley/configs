@@ -1,4 +1,9 @@
 #! /bin/bash
-vim "$SCRIPTS/$1"
+if [ -e "$1" ]; then
+  echo "Specify a script name" && exit 1
+fi
+script_path="$SCRIPTS/$1"
+echo "#!/bin/bash" > "$script_path"
+vim "$script_path"
 chmod +x $script_path
 

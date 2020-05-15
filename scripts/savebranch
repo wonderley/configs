@@ -1,0 +1,4 @@
+#!/bin/bash
+branchName=`curbranch`
+git checkout -b $branchName-tmp
+git checkout $branchName
