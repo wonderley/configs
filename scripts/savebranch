@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
 branchName=`curbranch`
-git checkout -b $branchName-tmp
+curTime=$(date -Iminutes | sed 's/+.*$//' | sed 's/:/./')
+git checkout -b $branchName-$curTime
 git checkout $branchName
