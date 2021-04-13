@@ -1,0 +1,2 @@
+#!/bin/bash
+git rebase origin/master --exec "git commit --amend --reset-author --no-edit"
