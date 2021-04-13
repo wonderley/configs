@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 lineNum=$1
 if ! echo "$lineNum" |
   grep -qE '^-[0-9]+$'; then
